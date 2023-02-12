@@ -15,18 +15,18 @@ Initial steps:
 
 ```
 CAMILLA_USER=<your local mac username>
-CAMILLA_OUT_DEVICE="<name of your USB DAC Device, use "system_profiler SPAudioDataType" to list available devices>"  
-CAMILLA_HOME=<folder where camilladsp is installed>  
-CAMILLA_PORT=<CamillaDSP port, default 1234>  
-CAMILLA_DAEMON_NAME=<Any unique string literal>  
+CAMILLA_OUT_DEVICE="<name of your USB DAC Device, use "system_profiler SPAudioDataType" to list available devices>"
+CAMILLA_HOME=<folder where camilladsp is installed>
+CAMILLA_PORT=<CamillaDSP port, default 1234>
+CAMILLA_DAEMON_NAME=<Any unique string literal>
 ```
 Example:  
 ```
 CAMILLA_USER=Zest
-CAMILLA_OUT_DEVICE="E30"  
-CAMILLA_HOME=/Users/Zest/CamillaDSP  
-CAMILLA_PORT=1234  
-CAMILLA_DAEMON_NAME=com.zest101.dsp_on_dac_attach  
+CAMILLA_OUT_DEVICE="E30"
+CAMILLA_HOME=/Users/Zest/CamillaDSP
+CAMILLA_PORT=1234
+CAMILLA_DAEMON_NAME=com.zest101.dsp_on_dac_attach
 ```
 
 Scripts: 
@@ -36,7 +36,7 @@ Scripts:
 2.  **stop\_camilladsp.sh**  
 	Stop both Camilla DSP and Camilla GUI
 3.  **enable\_autostart.sh**  
-	Set up launchd daemon to automatically start Camilla DSP & GUI when your USB DAC is connected / turned on. Sudo required. DAC should be connected where this script is run. Uses external utility (https://github.com/snosrap/xpc_set_event_stream_handler) to correctly process system USB attach events.
+	Generate plist based on your settings and set up launchd daemon to automatically start Camilla DSP & GUI when your USB DAC is connected / turned on. **launchd.plist.template** is used as template, all required parameters are filled in automatically. DAC should be connected where this script is run. Uses external utility (https://github.com/snosrap/xpc_set_event_stream_handler) to correctly process system USB attach events. Sudo is required to install daemon. 
 4.  **disable\_autostart.sh**  
 	Remove launchd daemon
 5.  **set\_filter\_value.sh**  
