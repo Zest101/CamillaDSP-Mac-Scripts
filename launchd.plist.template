@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UserName</key>
+	<string>CAMILLA_USER</string>
+	<key>StandardErrorPath</key>
+	<string>/tmp/CAMILLA_DAEMON_NAME.stderr</string>
+	<key>StandardOutPath</key>
+	<string>/tmp/CAMILLA_DAEMON_NAME.stdout</string>
+	<key>ProcessType</key>
+	<string>Interactive</string>
+	<key>Label</key>
+	<string>CAMILLA_DAEMON_NAME</string>
+	<key>WorkingDirectory</key>
+	<string>CAMILLA_HOME/control</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>CAMILLA_HOME/control/xpc_set_event_stream_handler</string>
+		<string>CAMILLA_HOME/control/start_camilladsp.sh</string>
+	</array>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.iokit.matching</key>
+		<dict>
+			<key>com.apple.device-attach</key>
+			<dict>
+				<key>idVendor</key>
+				<integer>DEVICE_VENDOR_ID</integer>
+				<key>idProduct</key>
+				<integer>DEVICE_PRODUCT_ID</integer>
+				<key>IOProviderClass</key>
+				<string>IOUSBDevice</string>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>
