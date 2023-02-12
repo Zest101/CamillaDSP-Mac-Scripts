@@ -4,8 +4,8 @@ source common_settings.txt
 
 echo "Configuring auto start of CamillaDSP after device $CAMILLA_OUT_DEVICE is connected"
 
-CAMILLA_OUT_DEVICE_VENDOR_ID=$(ioreg -n $CAMILLA_OUT_DEVICE -p IOUSB | grep idVendor | grep -E -o "[0-9]+")
-CAMILLA_OUT_DEVICE_PRODUCT_ID=$(ioreg -n $CAMILLA_OUT_DEVICE -p IOUSB | grep idProduct | grep -E -o "[0-9]+")
+CAMILLA_OUT_DEVICE_VENDOR_ID=$(ioreg -n "$CAMILLA_OUT_DEVICE" -p IOUSB | grep idVendor | grep -E -o "[0-9]+")
+CAMILLA_OUT_DEVICE_PRODUCT_ID=$(ioreg -n "$CAMILLA_OUT_DEVICE" -p IOUSB | grep idProduct | grep -E -o "[0-9]+")
 
 if [ "" = "$CAMILLA_OUT_DEVICE_VENDOR_ID" ]; then
 	echo "Unable to determine idVendor for $CAMILLA_OUT_DEVICE device"
