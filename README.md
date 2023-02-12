@@ -14,21 +14,21 @@ Initial steps:
 3.  Copy **common\_settings.txt.template** to **common\_settings.txt** and edit it to reflect your setup:
 
 	`
-	CAMILLA_USER=<your local mac username>
-	CAMILLA_OUT_DEVICE="<name of your USB DAC Device, use "system_profiler SPAudioDataType" to list available devices>"
-	CAMILLA_HOME=<folder where camilladsp is installed>
-	CAMILLA_PORT=<CamillaDSP port, default 1234>
-	CAMILLA_DAEMON_NAME=<Any unique string literal>
+	CAMILLA_USER=<your local mac username>  
+	CAMILLA_OUT_DEVICE="<name of your USB DAC Device, use "system_profiler SPAudioDataType" to list available devices>"  
+	CAMILLA_HOME=<folder where camilladsp is installed>  
+	CAMILLA_PORT=<CamillaDSP port, default 1234>  
+	CAMILLA_DAEMON_NAME=<Any unique string literal>  
 	`  
 	  
-	Example:
+	Example:  
 	  
 	`
-	CAMILLA_USER=Zest
-	CAMILLA_OUT_DEVICE="E30"
-	CAMILLA_HOME=/Users/Zest/CamillaDSP
-	CAMILLA_PORT=1234
-	CAMILLA_DAEMON_NAME=com.zest101.dsp_on_dac_attach
+	CAMILLA_USER=Zest  
+	CAMILLA_OUT_DEVICE="E30"  
+	CAMILLA_HOME=/Users/Zest/CamillaDSP  
+	CAMILLA_PORT=1234  
+	CAMILLA_DAEMON_NAME=com.zest101.dsp_on_dac_attach  
 	`
 
 Scripts: 
